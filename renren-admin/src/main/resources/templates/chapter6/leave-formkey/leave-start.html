@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<#include "/header.html">
+	</head>
+	<body>
+	<div id="rrapp" v-cloak>
+		<form class="form-horizontal">
+			<div class="control-group">
+				<label class="control-label">开始时间：</label>
+				<div class="controls">
+					<input type="text" v-model="leave.startDate" id="startDate" name="startDate" required />
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label">结束时间：</label>
+				<div class="controls">
+					<input type="text" v-model="leave.endDate" id="endDate" name="endDate" required />
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label">请假原因：</label>
+				<div class="controls">
+					<textarea id="reason" v-model="leave.reason" name="reason" required></textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<input type="button" class="btn btn-primary" @click="submitForm" value="确定"/>
+			</div>
+		</form>
+	</div>
+	<script src="${request.contextPath}/statics/js/activiti/leave-start.js"></script>
+	</body>
+</html>
